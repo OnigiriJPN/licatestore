@@ -97,23 +97,20 @@ export default function UploadPage() {
             </div>
 
             <div className="py-2">
-              <!--<ReCAPTCHA
+              <!-- <ReCAPTCHA
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LdjKHYtAAAAAE-Fa2ItZ5iKxABotmknm7eXiY98"}
                 onChange={(token) => setCaptchaToken(token)}
                 theme="dark"
-              /> --!>
+              /> -->
             </div>
 
             <button 
-              type="submit" 
-              disabled={!captchaToken}
-              className={`w-full font-extrabold py-3.5 rounded-xl shadow-lg transition-all text-sm ${
-                captchaToken 
-                  ? 'bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-slate-950 cursor-pointer' 
-                  : 'bg-slate-800 text-slate-500 cursor-not-allowed'
-              }`}
+              type="submit"
+              className={`w-full font-extrabold py-3.5 rounded-xl shadow-lg transition-all text-sm 
+                  bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-slate-950 cursor-pointer
+              `}
             >
-              {captchaToken ? 'LicateStoreに公開する 🚀' : 'ロボットでないことを証明してください'}
+              LicateStoreに公開する 🚀
             </button>
           </form>
         </div>
