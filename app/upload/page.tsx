@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+// リキャプチャ機能廃止
+// import ReCAPTCHA from 'react-google-recaptcha';
 import { uploadApp } from './actions';
 import Link from 'next/link';
 
@@ -96,11 +97,11 @@ export default function UploadPage() {
             </div>
 
             <div className="py-2">
-              <ReCAPTCHA
+              <!--<ReCAPTCHA
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LdjKHYtAAAAAE-Fa2ItZ5iKxABotmknm7eXiY98"}
                 onChange={(token) => setCaptchaToken(token)}
                 theme="dark"
-              />
+              /> --!>
             </div>
 
             <button 
