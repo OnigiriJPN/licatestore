@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: '✨ LicateStore',
   description: '非商用・自作アプリのためのセルフホスト・プラットフォーム',
   verification: {
-    google: 'RCuIloEpupoyk6FVp4iUJaIR4PDihMaTQ8D7CtBRC7Q';
+    google: 'RCuIloEpupoyk6FVp4iUJaIR4PDihMaTQ8D7CtBRC7Q',
   },
 };
 
