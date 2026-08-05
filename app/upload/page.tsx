@@ -97,7 +97,7 @@ export default function UploadPage() {
 
             <div className="py-2">
               <ReCAPTCHA
-                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "YOUR_SITE_KEY"}
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LdjKHYtAAAAAE-Fa2ItZ5iKxABotmknm7eXiY98"}
                 onChange={(token) => setCaptchaToken(token)}
                 theme="dark"
               />
