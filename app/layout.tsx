@@ -4,8 +4,11 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: '✨ LicateStore',
   description: '非商用・自作アプリのためのセルフホスト・プラットフォーム',
+  verification: {
+    google: '';
+  },
 };
-
+<meta name="google-site-verification" content="" />
 export default function RootLayout({
   children,
 }: {
