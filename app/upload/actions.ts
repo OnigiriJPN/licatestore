@@ -5,23 +5,6 @@ import { sql } from '@/lib/db';
 import { redirect } from 'next/navigation';
 
 export async function uploadApp(formData: FormData) {
-  const token = formData.get('g-recaptcha-response') as string;
-  if (!token) {
-    throw new Error('reCAPTCHAの認証が必要です。');
-  }
-
-  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
-  const verifyRes = await fetch(`https://www.google.com/recaptcha/api/siteverify`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: `secret=${secretKey}&response=${token}`,
-  });
-  const verifyData = await verifyRes.json();
-
-  if (!verifyData.success) {
-    throw new Error('reCAPTCHAの検証に失敗しました。');
-  }
-
   const name = formData.get('name') as string;
   const version = formData.get('version') as string;
   const category = formData.get('category') as string;
